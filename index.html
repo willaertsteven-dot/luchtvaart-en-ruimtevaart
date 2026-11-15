@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemel &amp; Ruimte – de passie van Steven</title>
+  <meta name="description" content="Een persoonlijke website over vliegtuigen, luchtvaart, SpaceX en ruimtevaart.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sterren" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#top" class="logo">✈️ Hemel &amp; Ruimte 🚀</a>
+    <button class="menu-knop" aria-label="Menu openen" aria-expanded="false">☰</button>
+    <nav>
+      <a href="#vliegtuigen">Vliegtuigen</a>
+      <a href="#spacex">SpaceX</a>
+      <a href="#tijdlijn">Tijdlijn</a>
+      <a href="#lancering">Lancering</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-tekst">
+        <p class="kicker">Van Kitty Hawk tot Starbase</p>
+        <h1>Van de <span class="accent">wolken</span> naar de <span class="accent2">sterren</span></h1>
+        <p class="lead">Welkom op de site van Steven. Hier draait alles om mijn passie: vliegtuigen, luchtvaart, SpaceX en de ruimtevaart in het algemeen.</p>
+        <div class="knoppen">
+          <a class="knop" href="#spacex">Ontdek SpaceX</a>
+          <a class="knop knop-rand" href="#lancering">Lanceer een raket</a>
+        </div>
+      </div>
+      <div class="hero-beeld" aria-hidden="true">
+        <svg viewBox="0 0 200 400" class="raket" id="heroRaket">
+          <defs>
+            <linearGradient id="romp" x1="0" x2="1">
+              <stop offset="0" stop-color="#cfd8e3"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#aab6c5"/>
+            </linearGradient>
+            <linearGradient id="vlam" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff7c2"/><stop offset=".4" stop-color="#ffb02e"/><stop offset="1" stop-color="#ff4d2e" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M100 10 C125 40 130 80 130 110 L130 300 L70 300 L70 110 C70 80 75 40 100 10Z" fill="url(#romp)"/>
+          <rect x="70" y="150" width="60" height="8" fill="#1b2a41"/>
+          <circle cx="100" cy="110" r="14" fill="#1b2a41" stroke="#8fb3ff" stroke-width="4"/>
+          <path d="M70 240 L40 310 L70 300Z" fill="#4da3ff"/>
+          <path d="M130 240 L160 310 L130 300Z" fill="#4da3ff"/>
+          <rect x="80" y="300" width="40" height="12" fill="#5b6b80"/>
+          <path class="vlam" d="M82 312 Q100 420 118 312Z" fill="url(#vlam)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- VLIEGTUIGEN -->
+    <section id="vliegtuigen" class="sectie">
+      <h2>✈️ Iconische vliegtuigen</h2>
+      <p class="intro">Toestellen die de geschiedenis van de luchtvaart hebben veranderd.</p>
+      <div class="kaarten">
+        <article class="kaart">
+          <div class="emoji">🛩️</div>
+          <h3>Wright Flyer</h3>
+          <p class="meta">Eerste vlucht: 17 december 1903</p>
+          <p>Orville Wright vloog bij Kitty Hawk 12 seconden en ongeveer 37 meter ver: de eerste gecontroleerde, aangedreven vlucht met een toestel zwaarder dan lucht.</p>
+        </article>
+        <article class="kaart">
+          <div class="emoji">🇬🇧</div>
+          <h3>Supermarine Spitfire</h3>
+          <p class="meta">Eerste vlucht: 5 maart 1936</p>
+          <p>De legendarische jager met de elliptische vleugels werd het symbool van de Battle of Britain in 1940.</p>
+        </article>
+        <article class="kaart">
+          <div class="emoji">👑</div>
+          <h3>Boeing 747</h3>
+          <p class="meta">Eerste vlucht: 9 februari 1969</p>
+          <p>De "Queen of the Skies": de eerste widebody-jumbojet, met zijn herkenbare bult. Hij maakte verre reizen betaalbaar voor het grote publiek.</p>
+        </article>
+        <article class="kaart">
+          <div class="emoji">⚡</div>
+          <h3>Concorde</h3>
+          <p class="meta">Eerste vlucht: 2 maart 1969</p>
+          <p>Brits-Frans supersonisch passagiersvliegtuig dat vloog aan ongeveer Mach 2. Londen–New York in zo'n 3,5 uur. In 2003 uit dienst genomen.</p>
+        </article>
+        <article class="kaart">
+          <div class="emoji">🖤</div>
+          <h3>Lockheed SR-71 Blackbird</h3>
+          <p class="meta">Snelheidsrecord: 1976</p>
+          <p>Verkenningsvliegtuig dat sneller dan Mach 3 vloog. Het houdt nog steeds het snelheidsrecord voor bemande vliegtuigen met straalmotoren (luchtademend).</p>
+        </article>
+        <article class="kaart">
+          <div class="emoji">🐋</div>
+          <h3>Airbus A380</h3>
+          <p class="meta">Eerste vlucht: 27 april 2005</p>
+          <p>Het grootste passagiersvliegtuig ooit, met twee volledige dekken over de hele lengte van de romp.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SPACEX -->
+    <section id="spacex" class="sectie donker">
+      <h2>🚀 SpaceX</h2>
+      <p class="intro">Opgericht in 2002 door Elon Musk, met één groot doel: ruimtevaart veel goedkoper maken dankzij herbruikbare raketten, en uiteindelijk mensen naar Mars brengen.</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab actief" data-tab="f9" role="tab">Falcon 9</button>
+        <button class="tab" data-tab="fh" role="tab">Falcon Heavy</button>
+        <button class="tab" data-tab="ss" role="tab">Starship</button>
+        <button class="tab" data-tab="dr" role="tab">Dragon</button>
+        <button class="tab" data-tab="re" role="tab">Herbruikbaar</button>
+      </div>
+
+      <div class="paneel actief" id="tab-f9">
+        <h3>Falcon 9</h3>
+        <p>Het werkpaard van SpaceX. Een tweetrapsraket met <strong>9 Merlin-motoren</strong> in de eerste trap (vandaar de naam). Eerste lancering op <strong>4 juni 2010</strong>.</p>
+        <ul>
+          <li>Lanceert satellieten, vracht en astronauten</li>
+          <li>De eerste trap landt terug op een landingsplatform of op een drone-schip in zee</li>
+          <li>Brengt ook de Starlink-internetsatellieten in een baan om de aarde</li>
+        </ul>
+      </div>
+      <div class="paneel" id="tab-fh">
+        <h3>Falcon Heavy</h3>
+        <p>Drie Falcon 9-eerste trappen naast elkaar: samen <strong>27 Merlin-motoren</strong>. De eerste vlucht was op <strong>6 februari 2018</strong>.</p>
+        <ul>
+          <li>Testlading van de eerste vlucht: een rode Tesla Roadster met de pop "Starman" achter het stuur</li>
+          <li>De twee zijboosters landden tegelijk, naast elkaar, terug op Cape Canaveral: een iconisch beeld</li>
+        </ul>
+      </div>
+      <div class="paneel" id="tab-ss">
+        <h3>Starship</h3>
+        <p>Het grootste en krachtigste raketsysteem dat ooit gevlogen heeft. De <strong>Super Heavy</strong>-booster heeft <strong>33 Raptor-motoren</strong> en draait op vloeibaar methaan en vloeibare zuurstof.</p>
+        <ul>
+          <li>Booster en schip samen zijn ongeveer 120 meter hoog</li>
+          <li>Ontworpen om volledig herbruikbaar te zijn</li>
+          <li>Op <strong>13 oktober 2024</strong> werd een Super Heavy-booster voor het eerst opgevangen door de "chopsticks"-armen van de lanceertoren</li>
+          <li>Bedoeld voor de Maan (NASA Artemis) en later Mars</li>
+        </ul>
+      </div>
+      <div class="paneel" id="tab-dr">
+        <h3>Dragon</h3>
+        <p>Het ruimtevaartuig van SpaceX voor vracht en bemanning.</p>
+        <ul>
+          <li><strong>Mei 2012</strong>: Dragon is het eerste commerciële ruimtevaartuig dat aan het ISS koppelt</li>
+          <li><strong>30 mei 2020</strong>: missie Demo-2 brengt NASA-astronauten Bob Behnken en Doug Hurley naar het ISS: de eerste bemande orbitale lancering vanaf Amerikaanse bodem sinds het einde van de Space Shuttle in 2011</li>
+          <li>Crew Dragon landt aan parachutes in zee</li>
+        </ul>
+      </div>
+      <div class="paneel" id="tab-re">
+        <h3>Herbruikbare boosters</h3>
+        <p>Vroeger werd een raket na één vlucht weggegooid. SpaceX veranderde dat.</p>
+        <ul>
+          <li><strong>21 december 2015</strong>: voor het eerst landt de eerste trap van een orbitale raket (Falcon 9) weer rechtop, op Cape Canaveral</li>
+          <li><strong>30 maart 2017</strong>: voor het eerst vliegt een gebruikte Falcon 9-booster opnieuw (missie SES-10)</li>
+          <li>Drone-schepen in de oceaan dienen als drijvend landingsplatform</li>
+          <li>Sommige boosters hebben intussen al tientallen vluchten achter de rug</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TIJDLIJN -->
+    <section id="tijdlijn" class="sectie">
+      <h2>🌍 Mijlpalen in lucht- en ruimtevaart</h2>
+      <p class="intro">Van de eerste vlucht tot een raket die door haar eigen toren wordt opgevangen.</p>
+      <ol class="tijdlijn">
+        <li><span class="jaar">1903</span><div><h4>Eerste gemotoriseerde vlucht</h4><p>De gebroeders Wright vliegen met de Wright Flyer bij Kitty Hawk.</p></div></li>
+        <li><span class="jaar">1927</span><div><h4>Lindbergh over de Atlantische Oceaan</h4><p>Charles Lindbergh vliegt solo en non-stop van New York naar Parijs met de Spirit of St. Louis.</p></div></li>
+        <li><span class="jaar">1947</span><div><h4>Door de geluidsbarrière</h4><p>Chuck Yeager vliegt met de Bell X-1 als eerste officieel sneller dan het geluid.</p></div></li>
+        <li><span class="jaar">1957</span><div><h4>Spoetnik 1</h4><p>Op 4 oktober lanceert de Sovjet-Unie de eerste kunstmatige satelliet.</p></div></li>
+        <li><span class="jaar">1961</span><div><h4>Eerste mens in de ruimte</h4><p>Joeri Gagarin draait op 12 april één baan rond de aarde met Vostok 1.</p></div></li>
+        <li><span class="jaar">1969</span><div><h4>Mensen op de Maan</h4><p>Op 20 juli landen Neil Armstrong en Buzz Aldrin met Apollo 11 op de Maan.</p></div></li>
+        <li><span class="jaar">1981</span><div><h4>Eerste Space Shuttle</h4><p>Columbia vertrekt op 12 april voor missie STS-1.</p></div></li>
+        <li><span class="jaar">1990</span><div><h4>Hubble-ruimtetelescoop</h4><p>Hubble wordt gelanceerd en verandert ons beeld van het heelal.</p></div></li>
+        <li class="be"><span class="jaar">1992</span><div><h4>🇧🇪 Eerste Belg in de ruimte</h4><p>Dirk Frimout vliegt mee met de Space Shuttle Atlantis (STS-45).</p></div></li>
+        <li><span class="jaar">1998</span><div><h4>Start van het ISS</h4><p>De eerste module, Zarja, wordt gelanceerd. Sinds november 2000 is het station permanent bewoond.</p></div></li>
+        <li><span class="jaar">2008</span><div><h4>Falcon 1 bereikt een baan</h4><p>De eerste privé-ontwikkelde raket op vloeibare brandstof die een baan rond de aarde bereikt.</p></div></li>
+        <li class="be"><span class="jaar">2009</span><div><h4>🇧🇪 Frank De Winne commandant van het ISS</h4><p>De eerste Europeaan die het bevel voert over het internationale ruimtestation.</p></div></li>
+        <li><span class="jaar">2015</span><div><h4>De booster landt!</h4><p>Een Falcon 9-eerste trap landt voor het eerst na een orbitale lancering.</p></div></li>
+        <li><span class="jaar">2018</span><div><h4>Falcon Heavy</h4><p>Eerste vlucht, met een Tesla Roadster als testlading.</p></div></li>
+        <li><span class="jaar">2020</span><div><h4>Crew Dragon met astronauten</h4><p>Demo-2: SpaceX wordt het eerste privébedrijf dat astronauten in een baan om de aarde brengt.</p></div></li>
+        <li><span class="jaar">2021</span><div><h4>James Webb-ruimtetelescoop</h4><p>Gelanceerd op 25 december met een Europese Ariane 5-raket.</p></div></li>
+        <li><span class="jaar">2024</span><div><h4>Chopsticks-vangst</h4><p>De Super Heavy-booster van Starship wordt opgevangen door de lanceertoren.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- LANCERING -->
+    <section id="lancering" class="sectie donker">
+      <h2>⏱️ Lanceer je eigen raket</h2>
+      <p class="intro">Druk op de knop en start het aftellen. T-minus 10…</p>
+      <div class="lanceerplatform">
+        <div class="aftelklok" id="aftelklok">T-10</div>
+        <div class="status" id="lanceerStatus">Klaar voor lancering</div>
+        <div class="pad">
+          <div class="mini-raket" id="miniRaket">🚀</div>
+        </div>
+        <div class="knoppen centraal">
+          <button class="knop" id="startKnop">Start aftellen</button>
+          <button class="knop knop-rand" id="resetKnop" disabled>Opnieuw</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="sectie">
+      <h2>🧠 Lucht- en ruimtevaartquiz</h2>
+      <p class="intro">Hoeveel weet jij? 8 vragen.</p>
+      <div class="quiz-doos">
+        <div class="voortgang"><div class="balk" id="quizBalk"></div></div>
+        <p class="vraagnr" id="vraagNr"></p>
+        <h3 id="vraag"></h3>
+        <div class="antwoorden" id="antwoorden"></div>
+        <p class="feedback" id="feedback"></p>
+        <button class="knop" id="volgende" hidden>Volgende vraag</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gemaakt met ❤️ voor luchtvaart en ruimtevaart · Steven Willaert</p>
+    <p class="klein">Alle illustraties zijn gemaakt met CSS, SVG en emoji. Feiten zijn gebaseerd op openbare bronnen zoals NASA, ESA en SpaceX.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
